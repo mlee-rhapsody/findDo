@@ -5,8 +5,9 @@ Usage: findDo.exe [search string] [file or shell script to execute]
 Example: findDo *.txt hw.bat
 
 
-I needed a command line program that recursively searches the current directory if
-found runs a shell script. Needed this as part of a build tool I was working on.
+I needed a command line program that recursively searches the current directory on a target
+search string (ie *.txt or *.cod). if found scripts runs a shell script added as 2nd param.
+Needed this as part of a build tool I was working on.
 
 (this project also allows me to learn GIT w/o messing up current projects.)
 

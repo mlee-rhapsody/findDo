@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.IO;
+using System.Diagnostics;
 
 
 namespace findDo
@@ -28,13 +29,10 @@ namespace findDo
             }
 
             string[] files = Directory.GetFiles(".", targetString, SearchOption.AllDirectories);
-
-
             Console.WriteLine("Searching..");
             
 
             int targetCount = files.Length;
-
             if (targetCount > 0)
             {
                 Console.WriteLine("Target found is: {0}", targetCount);
@@ -45,41 +43,32 @@ namespace findDo
             {
                 Console.WriteLine("Nothing found.");
             }
-
-
         }
 
 
         private static void runShellArgument(string shellArg)
         {
-            //Still buggy.. might need to change implementation.
 
-            //System.Diagnostics.Process pProcess = new System.Diagnostics.Process();
+            Process process = Process.Start(
+                new ProcessStartInfo("cmd.exe", "/c hw.bat")
+                {
+                    UseShellExecute = false,
+                    RedirectStandardOutput = true
+                });
 
-            //pProcess.EnableRaisingEvents = false;
-            //pProcess.StartInfo.FileName = @"c:\windows\system32\cmd.exe /c "+shellArg;
-            //pProcess.StartInfo.UseShellExecute = false;
-            //pProcess.StartInfo.RedirectStandardOutput = true;
-            //pProcess.StartInfo.CreateNoWindow = true;
-            //pProcess.Start();
+            string output = process.StandardOutput.ReadToEnd();
+            process.WaitForExit();
 
-            ////string output = pProcess.StandardOutput.ReadToEnd();
-            //StreamReader stdOut = pProcess.StandardOutput;
-            //pProcess.WaitForExit();
+            if (process.ExitCode == 0)
+            {
 
-            //StringBuilder sb = new StringBuilder();
+                Console.WriteLine(output);
+            }
+            else
+            {
+                Console.WriteLine("Error w/exitcode: {0}", process.ExitCode);
 
-            //while (!stdOut.EndOfStream) {
-            //    sb.AppendLine(stdOut.ReadLine());
-            //}
-
-
-            //Console.WriteLine(sb.ToString());
-            
-
-            //pProcess.Close();
-            //Console.WriteLine("runShellFake");
-
+            }
         }
 
         private static void printTargetsFound(string[] files)
