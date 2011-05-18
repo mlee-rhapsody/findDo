@@ -1,0 +1,10 @@
+C:\Users\mlee\AppData\Local\Temporary Projects\findDo\bin\Release\findDo.exe
+C:\Users\mlee\AppData\Local\Temporary Projects\findDo\bin\Release\findDo.pdb
+C:\Users\mlee\AppData\Local\Temporary Projects\findDo\obj\x86\Release\ResolveAssemblyReference.cache
+C:\Users\mlee\AppData\Local\Temporary Projects\findDo\obj\x86\Release\findDo.exe
+C:\Users\mlee\AppData\Local\Temporary Projects\findDo\obj\x86\Release\findDo.pdb
+C:\Users\mlee\documents\visual studio 2010\Projects\findDo\findDo\obj\x86\Release\findDo.exe
+C:\Users\mlee\documents\visual studio 2010\Projects\findDo\findDo\obj\x86\Release\findDo.pdb
+C:\Users\mlee\documents\visual studio 2010\Projects\findDo\findDo\bin\Release\findDo.exe
+C:\Users\mlee\documents\visual studio 2010\Projects\findDo\findDo\bin\Release\findDo.pdb
+C:\Users\mlee\documents\visual studio 2010\Projects\findDo\findDo\obj\x86\Release\ResolveAssemblyReference.cache
